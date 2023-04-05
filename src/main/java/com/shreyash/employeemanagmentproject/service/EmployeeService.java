@@ -13,4 +13,6 @@ public interface EmployeeService {
    void addEmployee(NewEmployeeRequest newEmployeeRequest);
 
    void updateEmployee(Integer empId, NewEmployeeRequest newEmployeeRequest);
+
+   void deleteEmployeById(Integer empId);
 }

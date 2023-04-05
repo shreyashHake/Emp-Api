@@ -39,4 +39,9 @@ public class EmplyoeeController {
         return "Employee with Id " + empId + " is updated!";
     }
 
+    @DeleteMapping("/delete/{empId}")
+    public String deleteEmployeById(@PathVariable("empId") Integer empId) {
+        employeeService.deleteEmployeById(empId);
+        return "Deletion was Successful!";
+    }
 }
