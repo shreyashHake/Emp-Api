@@ -11,4 +11,6 @@ public interface EmployeeService {
    List<Employee> getAllEmployee();
 
    void addEmployee(NewEmployeeRequest newEmployeeRequest);
+
+   void updateEmployee(Integer empId, NewEmployeeRequest newEmployeeRequest);
 }

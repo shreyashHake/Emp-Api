@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
@@ -29,6 +30,18 @@ public class EmployeeServiceImpl implements EmployeeService{
                 newEmployeeRequest.empAge()
         );
         System.out.println(newEmployeeRequest.toString());
+        employeeRepo.save(employee);
+    }
+
+    @Override
+    public void updateEmployee(Integer empId, NewEmployeeRequest newEmployeeRequest) {
+        Optional<Employee> employeeOptional = employeeRepo.findById(empId);
+        Employee employee = employeeOptional.get();
+
+        employee.setEmpName(newEmployeeRequest.empName());
+        employee.setEmpEmail(newEmployeeRequest.empEmail());
+        employee.setEmpAge(newEmployeeRequest.empAge());
+
         employeeRepo.save(employee);
     }
 }

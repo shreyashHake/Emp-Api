@@ -21,9 +21,22 @@ public class EmplyoeeController {
     }
 
     @PostMapping("/post")
-    public String addEmployee(@RequestBody NewEmployeeRequest newEmployeeRequest){
+    public String addEmployee(@RequestBody NewEmployeeRequest newEmployeeRequest) {
         employeeService.addEmployee(newEmployeeRequest);
         return "Employee data Added Successfully!";
+    }
+
+    @PutMapping("/update/{empId}")
+    public String updateEmployee(
+            @PathVariable("empId") Integer empId,
+            @RequestBody NewEmployeeRequest newEmployeeRequest
+    ) {
+        employeeService.updateEmployee(
+                empId,
+                newEmployeeRequest
+        );
+
+        return "Employee with Id " + empId + " is updated!";
     }
 
 }
