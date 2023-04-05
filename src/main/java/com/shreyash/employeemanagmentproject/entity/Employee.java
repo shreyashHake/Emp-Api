@@ -10,7 +10,7 @@ public class Employee {
     @Id
     @SequenceGenerator(
             name = "empId",
-            sequenceName =  "empId"
+            sequenceName = "empId"
     )
     @GeneratedValue(
             generator = "empId",

@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
 public interface EmployeeService {
-   List<Employee> getAllEmployee();
+    List<Employee> getAllEmployee();
 
-   void addEmployee(NewEmployeeRequest newEmployeeRequest);
+    void addEmployee(NewEmployeeRequest newEmployeeRequest);
 
-   void updateEmployee(Integer empId, NewEmployeeRequest newEmployeeRequest);
+    void updateEmployee(Integer empId, NewEmployeeRequest newEmployeeRequest);
 
-   void deleteEmployeById(Integer empId);
+    void deleteEmployeById(Integer empId);
 }

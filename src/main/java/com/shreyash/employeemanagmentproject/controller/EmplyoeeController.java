@@ -42,6 +42,6 @@ public class EmplyoeeController {
     @DeleteMapping("/delete/{empId}")
     public String deleteEmployeById(@PathVariable("empId") Integer empId) {
         employeeService.deleteEmployeById(empId);
-        return "Deletion was Successful!";
+        return "Employee wit + " + empId + " was Successful!";
     }
 }

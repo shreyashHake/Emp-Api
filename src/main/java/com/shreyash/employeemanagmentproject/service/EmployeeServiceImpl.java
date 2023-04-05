@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeRepo employeeRepo;
@@ -29,7 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService{
                 newEmployeeRequest.empEmail(),
                 newEmployeeRequest.empAge()
         );
-        System.out.println(newEmployeeRequest.toString());
+        System.out.println(newEmployeeRequest);
         employeeRepo.save(employee);
     }
 
