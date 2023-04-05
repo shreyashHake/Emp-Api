@@ -1,3 +1,3 @@
 package com.shreyash.employeemanagmentproject.records;
 
-record NewEmployeeRequest(String name, String email, Integer age){}
+public record NewEmployeeRequest(String empName, String empEmail, Integer empAge){}

@@ -19,22 +19,22 @@ public class Employee {
     private Integer empId;
     private String empName;
     private String empEmail;
-    private Integer age;
+    private Integer empAge;
 
     public Employee() {
     }
 
-    public Employee(Integer empId, String empName, String empEmail, Integer age) {
+    public Employee(Integer empId, String empName, String empEmail, Integer empAge) {
         this.empId = empId;
         this.empName = empName;
         this.empEmail = empEmail;
-        this.age = age;
+        this.empAge = empAge;
     }
 
-    public Employee(String empName, String empEmail, Integer age) {
+    public Employee(String empName, String empEmail, Integer empAge) {
         this.empName = empName;
         this.empEmail = empEmail;
-        this.age = age;
+        this.empAge = empAge;
     }
 
     public Integer getEmpId() {
@@ -61,12 +61,12 @@ public class Employee {
         this.empEmail = empEmail;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getEmpAge() {
+        return empAge;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setEmpAge(Integer empAge) {
+        this.empAge = empAge;
     }
 
     @Override
@@ -74,12 +74,12 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(empId, employee.empId) && Objects.equals(empName, employee.empName) && Objects.equals(empEmail, employee.empEmail) && Objects.equals(age, employee.age);
+        return Objects.equals(empId, employee.empId) && Objects.equals(empName, employee.empName) && Objects.equals(empEmail, employee.empEmail) && Objects.equals(empAge, employee.empAge);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(empId, empName, empEmail, age);
+        return Objects.hash(empId, empName, empEmail, empAge);
     }
 
     @Override
@@ -88,7 +88,7 @@ public class Employee {
                 "empId=" + empId +
                 ", empName='" + empName + '\'' +
                 ", empEmail='" + empEmail + '\'' +
-                ", age=" + age +
+                ", age=" + empAge +
                 '}';
     }
 }
